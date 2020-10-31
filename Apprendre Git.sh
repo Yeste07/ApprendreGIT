@@ -156,7 +156,7 @@ Date:   Fri Oct 30 19:01:25 2020 +0100
     first commit
 
 YESTE@IT-Engineer MINGW64 /d/Test (master)
-$ git reset --hard 3c7143a848a2ec
+$ git reset --hard 3c7143a848a2ec               (--soft,--mixed)
 HEAD is now at 3c7143a ajout de la balise script
 
 YESTE@IT-Engineer MINGW64 /d/Test (master)
@@ -176,7 +176,20 @@ Date:   Fri Oct 30 19:01:25 2020 +0100
 #12)modifier le message de dernier commit
 
 git commit -m 'firstCommit'
-git commit --amend - 'stepnumber1' [Cette commande permet de modifier mon message commit]
+git commit --amend -m 'stepnumber1' [Cette commande permet de modifier mon message commit]
 
 
+#13)Ne pas modifier le message de commit
+git add FichierOublie.txt
+git commit --amend --no-edit [Cela vous permet de utilisé le dernier message commit pour les nouvelles modification]
 
+"La différence entre Revert et Reset est que Reset va revenir à l'état précédent sans créer un nouveau commit, 
+ alors que Revert va créer un nouveau commit."
+
+Git gère les versions de vos travaux locaux à travers 3 zones locales majeures :
+
+    le répertoire de travail (working directory/WD).
+
+    l’index ou stage (nous préférerons le second terme).
+
+    le dépôt local (Git directory/repository).
